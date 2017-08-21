@@ -1,10 +1,6 @@
-* {
-    margin: 0 auto;
-    padding: 0;
-}
-
-/*.navbar-inverse {*/
-    /*background-color: #586B8F;*/
+/** {*/
+    /*margin: 0 auto;*/
+    /*padding: 0;*/
 /*}*/
 
 html, body,.container-left .container-right {height: 100%; }
@@ -63,10 +59,48 @@ body {
 
 }
 
+.container-right p {
+    float: left;
+}
+
 .panel {
     /*padding-right: 0;*/
     position: absolute;
     /*top: 100px;*/
     width: 75%;
 
+}
+
+.hide {
+    display: none;
+}
+
+.form-group,.input-group,.date,.form_datetime,.col-md-5{
+    margin: 0;
+    width: 220px;
+    /*float: left;*/
+}
+
+.form-control {
+    width: 220px;
+    margin: 0;
+    /*float: left;*/
+}
+
+/*.clearfloat {*/
+    /*clear: both;*/
+/*}*/
+
+.col-md-1 {
+    padding: 0;
+    width: 80px;
+}
+.col-md-3 {
+    padding: 0;
+}
+
+.row p {
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
 }

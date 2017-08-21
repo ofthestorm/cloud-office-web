@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script>
+        $('.form_datetime').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 1
+        });
+        $('.form_date').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('.form_time').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-static-top">
@@ -58,38 +95,71 @@
 
 </div>
 <div class="container-right">
-    <p>所属部门：</p>
-    <select class="form-control">
-        <option>全部</option>
-        <option>市场部</option>
-        <option>财务部</option>
-    </select>
-    <p>签到状态：</p>
-    <select class="form-control">
-        <option>全部</option>
-        <option>正常</option>
-        <option>迟到</option>
-        <option>早退</option>
-        <option>缺勤</option>
-    </select>
-    <p>考勤日期：</p>
-    <div class="form-group">
-        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-            <input class="form-control" size="16" type="text" value="" readonly>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    <div class="row">
+        <div class="col-md-1"><p>所属部门：</p></div>
+        <div class="col-md-3">
+            <!--<p>所属部门：</p>-->
+            <select class="form-control">
+                <option>全部</option>
+                <option>市场部</option>
+                <option>财务部</option>
+            </select>
         </div>
-        <input type="hidden" id="dtp_input2" value="" /><br/>
+        <div class="col-md-3">
+            <div class="col-md-1"><p>签到状态：</p></div>
+            <!--<p>签到状态：</p>-->
+            <select class="form-control">
+                <option>全部</option>
+                <option>正常</option>
+                <option>迟到</option>
+                <option>早退</option>
+                <option>缺勤</option>
+            </select>
+        </div>
     </div>
-    <p>至</p>
-    <div class="form-group">
-        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-            <input class="form-control" size="16" type="text" value="" readonly>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    <div class="row">
+        <div class="col-md-1"><p>考勤日期：</p></div>
+        <div class="col-md-3">
+            <!--<p>考勤日期：</p>-->
+            <div class="container">
+                <form action="" class="form-horizontal"  role="form">
+                    <fieldset>
+                        <!--<legend>Test</legend>-->
+                        <div class="form-group">
+                            <!--<label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>-->
+                            <div class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07c Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input1" value="" /><br/>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
-        <input type="hidden" id="dtp_input3" value="" /><br/>
+        <div class="col-md-1"><p>至</p></div>
+        <div class="col-md-3" >
+            <div class="container">
+                <form action="" class="form-horizontal"  role="form">
+                    <fieldset>
+                        <!--<legend>Test</legend>-->
+                        <div class="form-group">
+                            <!--<label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>-->
+                            <div class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07c Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input2" value="" /><br/>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
     </div>
 
-    <button type="button" class="btn btn-primary">查询</button>
 
 
 
@@ -154,16 +224,15 @@
     </div>
 </div>
 
-
-<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
-<script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-</script>
+<!--<script type="text/javascript" src="js/jquery-3.2.1.js"></script>-->
+<!--<script type="text/javascript" src="js/bootstrap.js"></script>-->
+<!--<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>-->
+<!--<script>-->
+    <!--$("#menu-toggle").click(function(e) {-->
+        <!--e.preventDefault();-->
+        <!--$("#wrapper").toggleClass("toggled");-->
+    <!--});-->
+<!--</script>-->
 
 </body>
 </html>
