@@ -5529,7 +5529,7 @@ jQuery.each( {
 	}
 }, jQuery.event.addProp );
 
-// Create mouseenter/leave events using mouseover/out and event-time checks
+// Create mouseenter/leave.html events using mouseover/out and event-time checks
 // so that event delegation works in jQuery.
 // Do the same for pointerenter/pointerleave and pointerover/pointerout
 //
@@ -5553,7 +5553,7 @@ jQuery.each( {
 				related = event.relatedTarget,
 				handleObj = event.handleObj;
 
-			// For mouseenter/leave call the handler if related is outside the target.
+			// For mouseenter/leave.html call the handler if related is outside the target.
 			// NB: No relatedTarget if the mouse left/entered the browser window
 			if ( !related || ( related !== target && !jQuery.contains( target, related ) ) ) {
 				event.type = handleObj.origType;

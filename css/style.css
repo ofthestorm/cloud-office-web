@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /** {*/
     /*margin: 0 auto;*/
     /*padding: 0;*/
@@ -8,17 +10,52 @@ html, body,.container-left .container-right {
 }
 
 
-footer {
-    /*font-size: 14px;*/
-    /*margin: auto;*/
-    text-align:center;
-    width: 200px;
-    color: darkgrey;
-    margin-left: auto;
-    margin-right: auto;
+body {
+    width: 100%;
 }
 
+/*footer {*/
+    /*!*font-size: 14px;*!*/
+    /*!*margin: auto;*!*/
+    /*text-align:center;*/
+    /*width: 200px;*/
+    /*color: darkgrey;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*!*position: absolute;*!*/
+    /*!*bottom: 0;*!*/
+/*}*/
+.footer {
+    width: 250px;
+    /*background-color: black;*/
+    color: darkgrey;
+    height: 30px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    margin: 0 auto;
+    text-align: center;
+}
+.footer p {
+    line-height: 30px;
+    text-align: center;
 
+}
+/*.footer footer {*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+/*}*/
+.nav-logo {
+    height: 50px;
+    over-flow: hidden;
+}
+
+.logo {
+    height: 40px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .sidebar {
     background-color: grey;
@@ -38,9 +75,6 @@ footer {
     width: 100%;
 }
 
-body {
-    width: 100%;
-}
 
 
 .container-left {
@@ -48,14 +82,16 @@ body {
     background-color: #F8F8F8;
     float: left;
     height: 100%;
+    /*position: fixed;*/
 }
 
 .container-right {
-    padding: 5% 2.5%;
+    /*padding: 5% 2.5%;*/
+    padding-top: 5%;
     float: left;
     height: 100%;
     width: 80%;
-
+    /*overflow-y: auto;*/
 }
 
 .container-right p {
@@ -94,3 +130,6 @@ body {
     line-height: 34px;
 }
 
+.center-content {
+    padding: 0 2.5%;
+}
