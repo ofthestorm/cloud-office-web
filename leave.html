@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-static-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header nav-logo" style="">
+            <a class="navbar-brand" href="#" class="logo">
+                <img alt="Brand"  src="img/logo.png" style="height: 25px">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">考勤<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">邮件</a></li>
+                <li><a href="#">文档</a></li>
+                <li><a href="#">薪资</a></li>
+                <li><a href="#">员工管理</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户名 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-left">
+
+    <div class="col-sm-3 col-md-2 nav-list">
+
+        <ul class="nav nav-sidebar">
+            <li><a href="#attendance">签到<span class="sr-only">(current)</span></a></li>
+            <li class="sidebar-active"><a href="#leave">请假</a></li>
+            <li><a href="#overtime">加班</a></li>
+            <li><a href="#detail">考勤统计</a></li>
+        </ul>
+    </div>
+
+</div>
+<div class="container-right pre-scrollable">
+    <div class="center-content">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"><p>所属部门：</p></div>
+                <div class="col-md-3">
+                    <!--<p>所属部门：</p>-->
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>市场部</option>
+                        <option>财务部</option>
+                    </select>
+                </div>
+                <div class="col-md-1"><p>当前状态：</p></div>
+                <div class="col-md-3">
+
+                    <select class="form-control">
+                        <option>通过</option>
+                        <option>被驳回</option>
+                        <option>待审批</option>
+                        <option>已取消</option>
+                    </select>
+                </div>
+                <div class="col-md-1"><p>签到状态：</p></div>
+                <div class="col-md-3">
+
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>正常</option>
+                        <option>迟到</option>
+                        <option>早退</option>
+                        <option>缺勤</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"><p>请假类别：</p></div>
+                <div class="col-md-3">
+
+                    <select class="form-control">
+                        <option>事假</option>
+                        <option>病假</option>
+                        <option>产假</option>
+                        <option>年休假</option>
+                        <option>调休</option>
+                        <option>出差</option>
+                        <option>年休假</option>
+                        <option>其他</option>
+                    </select>
+                </div>
+                <div class="col-md-1"><p>考勤日期：</p></div>
+                <div class="col-md-3">
+                    <!--<p>考勤日期：</p>-->
+                    <!--<div class="container">-->
+                    <form action="" class="form-horizontal"  role="form">
+                        <fieldset>
+                            <!--<legend>Test</legend>-->
+
+                            <!--<label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>-->
+                            <!--col-md-5-->
+                            <div class="input-group date form_datetime" data-date="1979-09-16T05:25:07c Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input1" value="" /><br/>
+
+                        </fieldset>
+                    </form>
+                    <!--</div>-->
+                </div>
+                <div class="col-md-1"><p>至</p></div>
+                <div class="col-md-3" >
+                    <div class="container">
+                        <form action="" class="form-horizontal"  role="form">
+                            <fieldset>
+                                <!--<legend>Test</legend>-->
+                                <div class="form-group">
+                                    <!--<label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>-->
+                                    <div class="input-group date form_datetime" data-date="1979-09-16T05:25:07c Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                        <input class="form-control" size="16" type="text" value="" readonly>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                                    </div>
+                                    <input type="hidden" id="dtp_input2" value="" /><br/>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1" >
+                    <button type="button" class="btn btn-primary btn-block" >查询</button>
+                </div>
+                <div class="col-md-1 col-md-offset-1" >
+                    <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal" onclick="applyForLeave()">申请请假</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="center-content">
+        <div class="panel panel-default">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>日期</th>
+                    <th>姓名</th>
+                    <th>部门</th>
+                    <th>上班时间</th>
+                    <th>下班时间</th>
+                    <th>考勤状态</th>
+                    <th>备注</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>2017-08-20</td>
+                    <td>Jacob</td>
+                    <td>市场部</td>
+                    <td>~</td>
+                    <td>~</td>
+                    <td>缺勤</td>
+                    <td>~</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>2017-08-19</td>
+                    <td>Jacob</td>
+                    <td>市场部</td>
+                    <td>~</td>
+                    <td>~</td>
+                    <td>缺勤</td>
+                    <td>~</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>2017-08-18</td>
+                    <td>Jacob</td>
+                    <td>市场部</td>
+                    <td>~</td>
+                    <td>~</td>
+                    <td>缺勤</td>
+                    <td>~</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>2017-08-17</td>
+                    <td>Jacob</td>
+                    <td>市场部</td>
+                    <td>~</td>
+                    <td>~</td>
+                    <td>缺勤</td>
+                    <td>~</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>2017-08-18</td>
+                    <td>Jacob</td>
+                    <td>市场部</td>
+                    <td>~</td>
+                    <td>~</td>
+                    <td>缺勤</td>
+                    <td>~</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>2017-08-18</td>
+                    <td>Jacob</td>
+                    <td>市场部</td>
+                    <td>~</td>
+                    <td>~</td>
+                    <td>缺勤</td>
+                    <td>~</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>2017-08-18</td>
+                    <td>Jacob</td>
+                    <td>市场部</td>
+                    <td>~</td>
+                    <td>~</td>
+                    <td>缺勤</td>
+                    <td>~</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>2017-08-18</td>
+                    <td>Jacob</td>
+                    <td>市场部</td>
+                    <td>~</td>
+                    <td>~</td>
+                    <td>缺勤</td>
+                    <td>~</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="center-content">
+        <div class="center-content">
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li class="disabled"><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <!--<script type="text/javascript" src="footer.js"></script>-->
+    <div class="footer">
+        <p class="center-block">Copyright &copy; 2017 Tongji SSE</p>
+    </div>
+
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">添加请假</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="name">名称</label>
+                        <input type="text" class="form-control" id="name" placeholder="请输入名称">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputfile">文件输入</label>
+                        <input type="file" id="inputfile">
+                        <p class="help-block">这里是块级帮助文本的实例。</p>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">请打勾
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">提交</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

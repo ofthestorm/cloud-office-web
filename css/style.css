@@ -87,7 +87,7 @@ body {
 
 .container-right {
     /*padding: 5% 2.5%;*/
-    padding-top: 5%;
+    padding-top: 60px;
     float: left;
     height: 100%;
     width: 80%;
@@ -126,10 +126,16 @@ body {
 
 .row p {
     height: 34px;
-    text-align: center;
+    /*text-align: center;*/
     line-height: 34px;
 }
 
 .center-content {
     padding: 0 2.5%;
+    margin: 0 auto;
+}
+
+.sidebar-active {
+    background-color: #EEEEEE;
+
 }
