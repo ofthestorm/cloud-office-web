@@ -2,29 +2,304 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        .footer {
-            width: 400px;
-            background-color: black;
-            height: 50px;
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
-            margin: 0 auto;
-            text-align: center;
-        }
-        .footer p {
-            line-height: 50px;
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        }
-    </style>
+    <script>
+        $('.form_datetime').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 1
+        });
+        $('.form_date').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('.form_time').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
+    </script>
 </head>
 <body>
-<div class="footer">
-    <!--<footer>-->
-    <p class="center-block">Copyright &copy; 2017 Tongji SSE</p>
-    <!--</footer>-->
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-static-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">考勤<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">邮件</a></li>
+                <li><a href="#">文档</a></li>
+                <li><a href="#">薪资</a></li>
+                <li><a href="#">员工管理</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户名 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-left">
+
+    <div class="col-sm-3 col-md-2  nav-list">
+
+        <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">签到<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">请假</a></li>
+            <li><a href="#">加班</a></li>
+            <li><a href="#">考勤统计</a></li>
+        </ul>
+    </div>
+
 </div>
+<div class="container-right">
+    <form action="" method="post">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"><p>所属部门：</p></div>
+                <div class="col-md-3">
+                    <!--<p>所属部门：</p>-->
+                    <select class="form-control" name="所属部门">
+                        <option value="全部">全部</option>
+                        <option value="市场部">市场部</option>
+                        <option value="财务部">财务部</option>
+                    </select>
+                </div>
+                <div class="col-md-1"><p>签到状态：</p></div>
+                <div class="col-md-3">
+
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>正常</option>
+                        <option>迟到</option>
+                        <option>早退</option>
+                        <option>缺勤</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"><p>考勤日期：</p></div>
+                <div class="col-md-3">
+                    <!--<p>考勤日期：</p>-->
+                    <!--<div class="container">-->
+                    <form action="" class="form-horizontal"  role="form">
+                        <fieldset>
+                            <!--<legend>Test</legend>-->
+
+                            <!--<label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>-->
+                            <div class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07c Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input1" value="" /><br/>
+
+                        </fieldset>
+                    </form>
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="col-md-1"><p>至</p></div>
+            <div class="col-md-3" >
+                <div class="container">
+                    <form action="" class="form-horizontal"  role="form">
+                        <fieldset>
+                            <!--<legend>Test</legend>-->
+                            <div class="form-group">
+                                <!--<label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>-->
+                                <div class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07c Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                    <input class="form-control" size="16" type="text" value="" readonly>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                                </div>
+                                <input type="hidden" id="dtp_input2" value="" /><br/>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-1" >
+                <button type="button" class="btn btn-primary btn-block" >查询</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+    <div class="panel panel-default">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>日期</th>
+                <th>姓名</th>
+                <th>部门</th>
+                <th>上班时间</th>
+                <th>下班时间</th>
+                <th>考勤状态</th>
+                <th>备注</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>2017-08-20</td>
+                <td>Jacob</td>
+                <td>市场部</td>
+                <td>~</td>
+                <td>~</td>
+                <td>缺勤</td>
+                <td>~</td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>2017-08-19</td>
+                <td>Jacob</td>
+                <td>市场部</td>
+                <td>~</td>
+                <td>~</td>
+                <td>缺勤</td>
+                <td>~</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>2017-08-18</td>
+                <td>Jacob</td>
+                <td>市场部</td>
+                <td>~</td>
+                <td>~</td>
+                <td>缺勤</td>
+                <td>~</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>2017-08-17</td>
+                <td>Jacob</td>
+                <td>市场部</td>
+                <td>~</td>
+                <td>~</td>
+                <td>缺勤</td>
+                <td>~</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>2017-08-18</td>
+                <td>Jacob</td>
+                <td>市场部</td>
+                <td>~</td>
+                <td>~</td>
+                <td>缺勤</td>
+                <td>~</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>2017-08-18</td>
+                <td>Jacob</td>
+                <td>市场部</td>
+                <td>~</td>
+                <td>~</td>
+                <td>缺勤</td>
+                <td>~</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>2017-08-18</td>
+                <td>Jacob</td>
+                <td>市场部</td>
+                <td>~</td>
+                <td>~</td>
+                <td>缺勤</td>
+                <td>~</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>2017-08-18</td>
+                <td>Jacob</td>
+                <td>市场部</td>
+                <td>~</td>
+                <td>~</td>
+                <td>缺勤</td>
+                <td>~</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--<div class="footer">-->
+    <footer>
+        <p>Copyright &copy; 2017 Tongji SSE</p>
+    </footer>
+    <!--</div>-->
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 
 </body>
 </html>
