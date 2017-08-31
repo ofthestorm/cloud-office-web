@@ -1,4 +1,5 @@
 $(function () {
+
     //scrollbar适应当前高度
     var window_height = $(window).height();
     $('.pre-scrollable').css("max-height", window_height);
@@ -21,18 +22,18 @@ $(function () {
             default: break;
         }
     });
-    $('.nav-sidebar').children('li').each(function (index, element) {
-        // if(element.)
-    })
-    // $('#side-attendance').bind("click",function (event) {
-    //     $('#attendance').removeClass("hide");
-    // })
-    // $('#side-attendance').
-    // $('#side-leave').bind("click",function (event) {
-    //     $('#leave').removeClass("hide");
-    // })
 
     //datetime picker
+    $('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
     $('.form_date').datetimepicker({
         language:  'zh-CN',
         weekStart: 1,
