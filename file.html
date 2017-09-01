@@ -3,8 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <title>File</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
+<div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header nav-logo" style="">
+                <a class="navbar-brand" href="#" class="logo">
+                    <img alt="Brand"  src="img/logo.png" style="height: 25px">
+                </a>
+            </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">考勤<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">邮件</a></li>
+                    <li class="active"><a href="file.html">文档</a></li>
+                    <li><a href="#">薪资</a></li>
+                    <li><a href="#">员工管理</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户名 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">个人中心</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+<div class="container-left">
+
+    <div class="col-sm-3 col-md-2  nav-list">
+        <ul class="nav nav-sidebar">
+            <li class="sidebar-active" id="side-all"><a href="#attendance">文档库<span class="sr-only">(current)</span></a></li>
+            <li><a href="#leave" id="side-star">星标文件</a></li>
+            <li><a href="#leave" id="side-upload">我的上传</a></li>
+            <li><a href="#overtime" id="side-delete">回收站</a></li>
+        </ul>
+    </div>
+
+</div>
+<div class="container-right pre-scrollable">
+    <div class="module" id="attendance">
+        <!--<ol class="breadcrumb">-->
+            <!--<li class="active">全部</li>-->
+            <!--<li><a href="#">Library</a></li>-->
+            <!--<li class="active">Data</li>-->
+        <!--</ol>-->
+
+        <div class="center-content">
+            <div class="row">
+                <div class="col-lg-4 search-col">
+                    <div class="form-inline">
+                        <form action="" method="post" >
+                            <input class="form-control search" placeholder="搜索...">
+                            <button class="btn btn-default btn-no-border" onclick=""><span class="glyphicon glyphicon-search"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-lg-offset-7 search-col">
+                    <button type="button" class="btn btn-success btn-block uploadButton" data-toggle="modal" data-target="#uploadModal">上传文件</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="center-content">
+            <div class="panel panel-default">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>文件名</th>
+                        <th>上传人</th>
+                        <th>上传时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>测试</td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="center-content">
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li class="disabled"><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="module hide" id="leave">
+        <div class="center-content">
+        </div>
+        <div class="center-content">
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li class="disabled"><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="module hide" id="overtime">
+
+    </div>
+
+    <!--<script type="text/javascript" src="footer.js"></script>-->
+    <div class="footer">
+        <p class="center-block">Copyright &copy; 2017 Tongji SSE</p>
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
