@@ -44,6 +44,25 @@ $(function () {
         minView: 2,
         forceParse: 0
     });
+
+    // var i = 0;
+    $('.star').click(function () {
+        if($(this).hasClass("glyphicon-star-empty")){
+            $(this).removeClass("glyphicon-star-empty");
+            $(this).addClass("glyphicon-star");
+        } else {
+            $(this).removeClass("glyphicon-star");
+            $(this).addClass("glyphicon-star-empty");
+        }
+        i++;
+    });
+    $('.download').click(function () {
+        console.log("download");
+    })
+
+    $("#path").change(function () {
+        $("#docPath").val($(":file").val());
+    });
 })
 
 

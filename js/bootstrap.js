@@ -3,7 +3,6 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the MIT license
  */
-console.log("b js");
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }

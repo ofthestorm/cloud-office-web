@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+
 </head>
 <body>
 <div class="container">
@@ -84,7 +85,7 @@
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>文件名</th>
+                        <th width="40%">文件名</th>
                         <th>上传人</th>
                         <th>上传时间</th>
                         <th>操作</th>
@@ -92,14 +93,94 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>测试</td>
+                        <td><span class="glyphicon glyphicon-folder-open"> 文件夹</span></td>
                         <td>Jacob</td>
                         <td>2017-09-01 17:06:00</td>
                         <td>
-                            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
                         </td>
-
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-star-empty star"> </span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
                     </tr>
 
                     </tbody>
@@ -114,6 +195,36 @@
                 </ul>
             </nav>
         </div>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="uploadModalLabel">上传文件</h4>
+                    </div>
+                    <form action="" method="post">
+                        <div class="modal-body">
+                                <div class="form-horizontal">
+                                    <label class="col-sm-3 control-label">选择数据文件</label>
+                                    <div class="input-group">
+                                        <input id="docPath" class="form-control">
+                                        <span id="scan" style="position: relative;" class="btn btn-primary input-group-addon">
+                                            浏览<input id="path" class="form-control" type="file">
+                                        </span>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <input type="submit" class="btn btn-primary" value="上传">
+                        </div>
+                    </form>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
     </div>
 
     <div class="module hide" id="leave">
