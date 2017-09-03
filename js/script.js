@@ -6,7 +6,6 @@ $(function () {
 
     //sidebar click
     $('.nav-sidebar li').click(function () {
-        console.log('第'+$(this).index()+'个li被点击');
         $(this).addClass("sidebar-active").siblings('li').removeClass("sidebar-active");
 
         switch ($(this).index()) {
@@ -45,21 +44,30 @@ $(function () {
         forceParse: 0
     });
 
-    // var i = 0;
+    //收藏文件
     $('.star').click(function () {
         if($(this).hasClass("glyphicon-star-empty")){
             $(this).removeClass("glyphicon-star-empty");
             $(this).addClass("glyphicon-star");
+            //todo:点击收藏
         } else {
             $(this).removeClass("glyphicon-star");
             $(this).addClass("glyphicon-star-empty");
+            //todo:取消收藏
         }
         i++;
     });
     $('.download').click(function () {
-        console.log("download");
+        //todo:下载文件
+    })
+    $('.remove').click(function () {
+        //todo:移除星标文件
+    })
+    $('.delete').click(function () {
+        //todo:删除自己上传的文件
     })
 
+    //文件路径
     $("#path").change(function () {
         $("#docPath").val($(":file").val());
     });

@@ -48,10 +48,9 @@
 
     <div class="col-sm-3 col-md-2  nav-list">
         <ul class="nav nav-sidebar">
-            <li class="sidebar-active" id="side-all"><a href="#attendance">文档库<span class="sr-only">(current)</span></a></li>
-            <li><a href="#leave" id="side-star">星标文件</a></li>
-            <li><a href="#leave" id="side-upload">我的上传</a></li>
-            <li><a href="#overtime" id="side-delete">回收站</a></li>
+            <li class="sidebar-active" id="side-all"><a href="#all">文档库<span class="sr-only">(current)</span></a></li>
+            <li><a href="#star" id="side-star">星标文件</a></li>
+            <li><a href="#upload" id="side-upload">我的上传</a></li>
         </ul>
     </div>
 
@@ -65,30 +64,28 @@
         <!--</ol>-->
 
         <div class="center-content">
-            <div class="row">
-                <div class="col-lg-4 search-col">
-                    <div class="form-inline">
-                        <form action="" method="post" >
-                            <input class="form-control search" placeholder="搜索...">
-                            <button class="btn btn-default btn-no-border" onclick=""><span class="glyphicon glyphicon-search"></span></button>
-                        </form>
-                    </div>
+            <Div style="float:left; width: 100%">
+                <div class="form-inline search-col" style="float: left">
+                    <form action="" method="post" >
+                        <input class="form-control search" placeholder="搜索...">
+                        <button class="btn btn-default btn-no-border" onclick=""><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
                 </div>
-                <div class="col-lg-1 col-lg-offset-7 search-col">
+                <div class="search-col" style="float: right">
                     <button type="button" class="btn btn-success btn-block uploadButton" data-toggle="modal" data-target="#uploadModal">上传文件</button>
                 </div>
-            </div>
+            </Div>
         </div>
 
-        <div class="center-content">
+        <div class="center-content" style="clear:both">
             <div class="panel panel-default">
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th width="40%">文件名</th>
-                        <th>上传人</th>
-                        <th>上传时间</th>
-                        <th>操作</th>
+                        <th width="20%">上传人</th>
+                        <th width="25%">上传时间</th>
+                        <th width="15%">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -224,11 +221,127 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal -->
         </div>
-
     </div>
 
     <div class="module hide" id="leave">
         <div class="center-content">
+            <div style="float:left; width: 100%">
+                <div class="form-inline search-col" style="float: left">
+                    <form action="" method="post" >
+                        <input class="form-control search" placeholder="搜索...">
+                        <button class="btn btn-default btn-no-border" onclick=""><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="center-content" style="clear:both">
+            <div class="panel panel-default">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th width="40%">文件名</th>
+                        <th width="20%">上传人</th>
+                        <th width="25%">上传时间</th>
+                        <th width="15%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove remove"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="center-content">
             <nav aria-label="...">
@@ -241,10 +354,134 @@
     </div>
 
     <div class="module hide" id="overtime">
+        <div class="center-content">
+            <div style="float:left; width: 100%">
+                <div class="form-inline search-col" style="float: left">
+                    <form action="" method="post" >
+                        <input class="form-control search" placeholder="搜索...">
+                        <button class="btn btn-default btn-no-border" onclick=""><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+                </div>
 
+            </div>
+        </div>
+        <div class="center-content" style="clear:both">
+            <div class="panel panel-default">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th width="40%">文件名</th>
+                        <th width="20%">上传人</th>
+                        <th width="25%">上传时间</th>
+                        <th width="15%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-file"> 文件</span></td>
+                        <td>Jacob</td>
+                        <td>2017-09-01 17:06:00</td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash delete"></span>
+                            <span class="glyphicon glyphicon-download download"></span>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="center-content">
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li class="disabled"><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 
-    <!--<script type="text/javascript" src="footer.js"></script>-->
     <div class="footer">
         <p class="center-block">Copyright &copy; 2017 Tongji SSE</p>
     </div>
